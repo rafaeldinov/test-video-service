@@ -1,0 +1,158 @@
+@import '../base/vars';
+
+.main {
+  flex-direction: column;
+  margin-bottom: 60px;
+  color: $white;
+}
+
+.toggle {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 40px;
+  background-color: $white;
+
+  @media (max-width: '410px') {
+    max-width: 140px;
+  }
+}
+
+.toggle__monthly, .toggle__yearly {
+  background-color: $white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+
+  &:not(.active):hover {
+    cursor: pointer;
+    color: #20a1a1;
+  }
+}
+
+.active {
+  transition: margin-right 2s;
+  transition: all 0.25s ease;
+  background-color: #05bcbc;
+}
+
+.plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $white;
+    border-radius: 20px;
+    background-color: #1d1d1d;
+
+    &:hover {
+      background-color: #131111;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 50px;
+
+  &-basic {
+    color: $basic-price-color;
+  }
+
+  &-standart {
+    color: $standart-price-color;
+  }
+
+  &-premium {
+    color: $premium-price-color;
+  }
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+
+  &__item {
+    display: inline-flex;
+    align-items: baseline;
+    margin: 0 50px 30px 50px;
+    border-bottom: 1px solid #968989;
+  }
+
+  &__text {
+    font-size: 25px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.signup {
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 60px;
+  border: none;
+  border-radius: 12px;
+  color: $white;
+  cursor: pointer;
+  font-size: 18px;
+  align-self: center;
+
+  &-basic:hover {
+    background-color: #91ffd7;
+  }
+
+  &-standart:hover {
+    background-color: #7ca5ff;
+  }
+
+  &-premium:hover {
+    background-color: #ffbf60;
+  }
+}
+
+.plans__title {
+  font-size: 40px;
+}
+
+.title-basic {
+  color: $basic-price-color;
+}
+
+.title-standart {
+  color: $standart-price-color;
+}
+
+.title-premium {
+  color:	$premium-price-color;
+}
+
+.signup-basic {
+  background-color: $basic-price-color;
+}
+
+.signup-standart {
+  background-color: $standart-price-color;
+}
+
+.signup-premium {
+  background-color: $premium-price-color;
+}
